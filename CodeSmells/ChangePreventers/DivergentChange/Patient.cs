@@ -9,9 +9,9 @@ public class Patient(string patientName, IEnumerable<string> treatmentHistory)
     public void ExportTreatmentHistory(string fileName)
     {
         using var writer = new StreamWriter(fileName);
-        foreach (var treat in TreatmentHistory)
+        foreach (var treatment in TreatmentHistory)
         {
-            writer.WriteLine(json);
+            writer.WriteLine(treatment);
         }
     }
 }
