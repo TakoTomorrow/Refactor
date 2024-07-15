@@ -1,4 +1,4 @@
-﻿namespace Refactor.ChangePrevents;
+﻿namespace CodeSmells.DivergentChange.ChangePreventers;
 
 public class Patient
 {
@@ -9,14 +9,5 @@ public class Patient
     {
         PatientName = patientName;
         TreatmentHistory = treatmentHistory.ToList();
-    }
-
-    public void ExportTreatmentHistory(string fileName)
-    {
-        using var writer = new StreamWriter(fileName);
-        foreach (var treatment in TreatmentHistory)
-        {
-            writer.WriteLine(treatment);
-        }
     }
 }
