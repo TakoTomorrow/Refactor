@@ -5,7 +5,16 @@ public abstract class Teacher
     public abstract string ShowCurriculum();
 }
 
-public abstract class Curriculum
+public class Curriculum
 {
-    public abstract string GetPlannedEducationalOutcomes();
+    private readonly string CurriculumName;
+
+    public Curriculum(string name){
+        CurriculumName = name;
+    }
+
+    public string GetPlannedEducationalOutcomes()
+    {
+        return $"Educational outcomes for {@CurriculumName} learning";
+    }
 }
